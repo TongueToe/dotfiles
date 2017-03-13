@@ -141,14 +141,14 @@ label = %time%
 
 [module/lanip]
 type = custom/script
-interval = 45
+interval = 15
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 exec = ifconfig | grep 'inet addr' | cut -d ':' -f 2 | awk '{ print $1 }' | grep -E '^(192\.168|10\.|172\.1[6789]\.|172\.2[0-9]\.|172\.3[01]\.)'
 
 [module/wanip]
 type = custom/script
-interval = 45
+interval = 15
 exec = dig +short myip.opendns.com @resolver1.opendns.com
 
 [module/volume]
